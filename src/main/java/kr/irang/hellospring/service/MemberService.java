@@ -3,14 +3,18 @@ package kr.irang.hellospring.service;
 import kr.irang.hellospring.domain.Member;
 import kr.irang.hellospring.repository.MemberRepository;
 import kr.irang.hellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
