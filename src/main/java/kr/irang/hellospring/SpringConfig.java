@@ -2,7 +2,6 @@ package kr.irang.hellospring;
 
 import kr.irang.hellospring.repository.JdbcMemberRepository;
 import kr.irang.hellospring.repository.MemberRepository;
-import kr.irang.hellospring.repository.MemoryMemberRepository;
 import kr.irang.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,8 +12,9 @@ import javax.sql.DataSource;
 @Configuration
 public class SpringConfig {
 
-    private final DataSource dataSource;
+    private DataSource dataSource;
 
+    @Autowired
     public SpringConfig(DataSource dataSource) {
         this.dataSource = dataSource;
     }
