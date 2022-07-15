@@ -1,5 +1,6 @@
 package kr.irang.hellospring;
 
+import kr.irang.hellospring.aop.TimeTraceAop;
 import kr.irang.hellospring.repository.JdbcMemberRepository;
 import kr.irang.hellospring.repository.JdbcTemplatesMemberRepository;
 import kr.irang.hellospring.repository.JpaMemberRepository;
